@@ -9,7 +9,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     Button acesso;
-    TextView txtNoticias;
+    TextView txtNoticias, txt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
