@@ -22,6 +22,7 @@ public class ReqHttp {
     public ReqHttp(String url, String parametros) {
         this.parametros = parametros;
         new MakeNetworkCall().execute(url, "Post");
+
     }
 
     InputStream ByPostMethod(String ServerURL) {
@@ -106,16 +107,14 @@ public class ReqHttp {
 
     @Override
     public String toString() {
-        return "ReqHttp{" +
-                ", resposta='" + resposta + '\'' +
-                '}';
+        return resposta;
     }
 
     public void DisplayMessage(String a) {
 
        // TxtResult = findViewById(R.id.response);
        // TxtResult.setText(a);
-       // this.resposta = a;
+        this.resposta = a;
 
 
         System.out.println(a);
@@ -128,7 +127,7 @@ public class ReqHttp {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            DisplayMessage("Please Wait ...");
+           // DisplayMessage("Please Wait ...");
         }
 
         @Override
@@ -157,7 +156,7 @@ public class ReqHttp {
         @Override
         protected void onPostExecute(String result) {
             super.onPostExecute(result);
-
+            result = String.valueOf(result);
             DisplayMessage(result);
             //Log.d(LOG_TAG, "Result: " + result);
            // return result;

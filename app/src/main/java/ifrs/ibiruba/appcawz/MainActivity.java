@@ -1,5 +1,6 @@
 package ifrs.ibiruba.appcawz;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         acesso = findViewById(R.id.btn_aceesolivre);
         txtNoticias = findViewById(R.id.txtNoticias);
+       // txtTeste = findViewById(R.id.txtTeste);
 
 
 
@@ -26,9 +28,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void testeHTTP(View view){
-        ReqHttp requisicao = new ReqHttp("https://cawz.000webhostapp.com/consulta_noticia.php", "titulo=teste&corpo_noticia=teste com espaco&dia=10/10/2019");
-
-       // txtNoticias.setText(requisicao.resposta);
+    public void semConta(View view){
+        Intent principal = new Intent(this, principal.class);
+        startActivity(principal);
     }
+
+
 }
