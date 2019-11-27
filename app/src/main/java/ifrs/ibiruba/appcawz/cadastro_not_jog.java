@@ -42,13 +42,22 @@ public class cadastro_not_jog extends AppCompatActivity {
     }
 
     public void enviaRequisicao(){
-        //new cadastro_not_jog.MakeNetworkCall().execute("https://cawz.000webhostapp.com/grava_noticia.php?" + parametros, "Post");
-        parametros = "titulo=" + TituloNot + "&corpo_noticia=" + CorpoNot + "&dia=" + DataNot;
-        Loading.setText(parametros);
+        parametros = "titulo=" + TituloNot.getText() + "&corpo_noticia=" + CorpoNot.getText() + "&dia=" + DataNot.getText();
+        new cadastro_not_jog.MakeNetworkCall().execute("https://cawz.000webhostapp.com/grava_noticia.php", "Post");
+       // Loading.setText(parametros);
+    }
+
+    public void enviaJogoRequisicao(){
+        parametros = "jogo=" + JogoAtual.getText() + "&competicao=" + CompeticaoAtual.getText() + "&adversario=" + AdversarioAtual.getText();
+        new cadastro_not_jog.MakeNetworkCall().execute("https://cawz.000webhostapp.com/atualiza_jogos.php", "Post");
+        // Loading.setText(parametros);
     }
 
     public void enviarNot(View View){
         enviaRequisicao();
+    }
+    public void enviarJogo(View View){
+        enviaJogoRequisicao();
     }
 
 
