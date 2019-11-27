@@ -74,12 +74,12 @@
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/editText9"
+            android:id="@+id/txtCadastroTitulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name"
+            android:text="Título da Notícia"
             android:textAlignment="center" />
     </LinearLayout>
 
@@ -99,17 +99,17 @@
             android:id="@+id/textView11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Notícia"
+            android:text="Data Notícia"
             android:textAlignment="center"
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/editText10"
+            android:id="@+id/txtCadastroData"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name"
+            android:text="12/10/2019"
             android:textAlignment="center" />
     </LinearLayout>
 
@@ -129,33 +129,43 @@
             android:id="@+id/textView12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="Corpo"
             android:textAlignment="center"
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/editText11"
+            android:id="@+id/txtCadastroCorpo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name"
+            android:text="txtxtxtxtxttxtxtxt"
             android:textAlignment="center" />
     </LinearLayout>
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/btnEnviarNot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
+        android:onClick="enviarNot"
         android:text="Enviar"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout9" />
+
+    <TextView
+        android:id="@+id/txtRes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEnviarNot" />
 
     <TextView
         android:id="@+id/textView7"
@@ -186,17 +196,17 @@
             android:id="@+id/textView13"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="Jogo"
             android:textAlignment="center"
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/editText12"
+            android:id="@+id/txtAtualJogo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name"
+            android:text="12/110 | 12:00 | Módulo"
             android:textAlignment="center" />
     </LinearLayout>
 
@@ -217,17 +227,17 @@
             android:id="@+id/textView14"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="Competição"
             android:textAlignment="center"
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/editText13"
+            android:id="@+id/txtAtualCompeticao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name"
+            android:text="Copa do Brasil"
             android:textAlignment="center" />
     </LinearLayout>
 
@@ -248,28 +258,28 @@
             android:id="@+id/textView19"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="Adversário"
             android:textAlignment="center"
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/editText15"
+            android:id="@+id/txtAtualAdversario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name"
+            android:text="301"
             android:textAlignment="center" />
     </LinearLayout>
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/btnEnviarJogo"
         android:layout_width="wrap_content"
         android:layout_height="39dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
-        android:text="Button"
+        android:text="ENVIAR"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

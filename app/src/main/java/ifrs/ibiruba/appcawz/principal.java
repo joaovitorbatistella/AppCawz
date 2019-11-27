@@ -1,5 +1,6 @@
 package ifrs.ibiruba.appcawz;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,7 +18,7 @@ import java.net.URL;
 
 public class principal extends AppCompatActivity {
 
-    TextView Titulo1, Titulo2, Titulo3, Titulo4, Titulo5, Data5, Data4, Data3, Data2, Data1, Conteudo5, Conteudo4, Conteudo3, Conteudo2, Conteudo1;
+    TextView Titulo1, Titulo2, Titulo3, Titulo4, Titulo5, Data5, Data4, Data3, Data2, Data1, Conteudo5, Conteudo4, Conteudo3, Conteudo2, Conteudo1, Jogo, Adversario, Competicao;
     String parametros;
     String resposta = "";
     TextView txtResposta;
@@ -47,7 +48,16 @@ public class principal extends AppCompatActivity {
         Conteudo4 = findViewById(R.id.txtConteudo4);
         Conteudo5 = findViewById(R.id.txtConteudo5);
 
+        Jogo = findViewById(R.id.txtJogo);
+        Competicao = findViewById(R.id.txtCompeticao);
+        Adversario = findViewById(R.id.txtAdversario);
+
         enviaRequisicao();
+    }
+
+    public void editar(View view){
+        Intent cadastro = new Intent(this, cadastro_not_jog.class);
+        startActivity(cadastro);
     }
 
     public void enviaRequisicao(){
@@ -157,8 +167,17 @@ public class principal extends AppCompatActivity {
 
         String noticias[] = tudo[0].split("¢");
 
-        /*String jogos[] = tudo[1].split("¢");
-        String jogo1[] = jogos[0].split("£");*/
+        String jogo[] = tudo[1].split("¢");
+        String jogo1[] = jogo[0].split("£");
+
+        Jogo.setText(jogo1[0]);
+        Competicao.setText(jogo1[2]);
+        Adversario.setText(jogo1[1]);
+
+
+        Toast.makeText(this, jogo1[0], Toast.LENGTH_LONG);
+        Toast.makeText(this, jogo1[1], Toast.LENGTH_LONG);
+        Toast.makeText(this, jogo1[2], Toast.LENGTH_LONG);
 
         int noticiasTamanho = noticias.length;
 
