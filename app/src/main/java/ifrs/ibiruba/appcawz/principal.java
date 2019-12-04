@@ -403,7 +403,7 @@ public class principal extends AppCompatActivity {
 
 
 
-    private class MakeNetworkCall extends AsyncTask<String, Void, String> {
+    class MakeNetworkCall extends AsyncTask<String, Void, String> {
 
         @Override
         protected void onPreExecute() {
