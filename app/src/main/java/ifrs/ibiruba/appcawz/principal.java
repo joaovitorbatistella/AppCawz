@@ -60,6 +60,7 @@ public class principal extends AppCompatActivity {
         startActivity(cadastro);
     }
 
+
     public void enviaRequisicao(){
         new MakeNetworkCall().execute("https://cawz.000webhostapp.com/consulta_noticia.php", "Post");
     }

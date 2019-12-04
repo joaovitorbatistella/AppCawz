@@ -10,7 +10,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     Button acesso;
-    TextView txtNoticias, txt;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,8 +18,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         acesso = findViewById(R.id.btn_aceesolivre);
-        txtNoticias = findViewById(R.id.txtNoticias);
-       // txtTeste = findViewById(R.id.txtTeste);
 
 
 

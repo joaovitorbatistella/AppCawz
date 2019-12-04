@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#201B36"
     tools:context=".cadastro_not_jog">
 
     <ScrollView
@@ -27,19 +28,6 @@
             android:orientation="vertical" />
     </ScrollView>
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="250dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="Ver Notícias"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/scrollView2" />
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -48,10 +36,22 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="150dp"
         android:text="Cadastro de Notícias"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/scrollView2" />
+
+    <Button
+        android:id="@+id/btnEnviarJogo"
+        android:layout_width="98dp"
+        android:layout_height="38dp"
+        android:onClick="enviarNot"
+        android:text="Cadastro"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout10"
@@ -71,6 +71,7 @@
             android:layout_height="wrap_content"
             android:text="Título"
             android:textAlignment="center"
+            android:textColor="#FFFFFF"
             android:textSize="18sp" />
 
         <EditText
@@ -80,7 +81,8 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:text="Título da Notícia"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textColor="#FFFFFF" />
     </LinearLayout>
 
     <LinearLayout
@@ -101,6 +103,7 @@
             android:layout_height="wrap_content"
             android:text="Data Notícia"
             android:textAlignment="center"
+            android:textColor="#FFFFFF"
             android:textSize="18sp" />
 
         <EditText
@@ -110,7 +113,8 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:text="12/10/2019"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textColor="#FFFFFF" />
     </LinearLayout>
 
     <LinearLayout
@@ -131,6 +135,7 @@
             android:layout_height="wrap_content"
             android:text="Corpo"
             android:textAlignment="center"
+            android:textColor="#FFFFFF"
             android:textSize="18sp" />
 
         <EditText
@@ -140,32 +145,18 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:text="txtxtxtxtxttxtxtxt"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textColor="#FFFFFF" />
     </LinearLayout>
-
-    <Button
-        android:id="@+id/btnEnviarNot"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="250dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="1dp"
-        android:onClick="enviarNot"
-        android:text="Enviar"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout9" />
 
     <TextView
         android:id="@+id/txtRes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/textView7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnEnviarNot" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView7"
@@ -175,10 +166,24 @@
         android:layout_marginTop="250dp"
         android:layout_marginEnd="100dp"
         android:text="Atualizar Jogos"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/btnEnviarJogo"
+        android:layout_width="103dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="290dp"
+        android:layout_marginEnd="10dp"
+        android:onClick="enviarJogo"
+        android:text="Atualizar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout11"
@@ -198,6 +203,7 @@
             android:layout_height="wrap_content"
             android:text="Jogo"
             android:textAlignment="center"
+            android:textColor="#FFFFFF"
             android:textSize="18sp" />
 
         <EditText
@@ -207,7 +213,8 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:text="12/110 | 12:00 | Módulo"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textColor="#FFFFFF" />
     </LinearLayout>
 
     <LinearLayout
@@ -229,6 +236,7 @@
             android:layout_height="wrap_content"
             android:text="Competição"
             android:textAlignment="center"
+            android:textColor="#FFFFFF"
             android:textSize="18sp" />
 
         <EditText
@@ -238,7 +246,8 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:text="Copa do Brasil"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textColor="#FFFFFF" />
     </LinearLayout>
 
     <LinearLayout
@@ -260,6 +269,7 @@
             android:layout_height="wrap_content"
             android:text="Adversário"
             android:textAlignment="center"
+            android:textColor="#FFFFFF"
             android:textSize="18sp" />
 
         <EditText
@@ -269,21 +279,19 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:text="301"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textColor="#FFFFFF" />
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnEnviarJogo"
-        android:layout_width="wrap_content"
-        android:layout_height="39dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="8dp"
-        android:onClick="enviarJogo"
-        android:text="ENVIAR"
-        android:textSize="18sp"
+        android:id="@+id/button5"
+        android:layout_width="130dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="130dp"
+        android:onClick="delete"
+        android:text="Ver Noticias"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout13" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

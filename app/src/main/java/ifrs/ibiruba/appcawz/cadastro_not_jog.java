@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -35,10 +34,15 @@ public class cadastro_not_jog extends AppCompatActivity {
         JogoAtual = findViewById(R.id.txtAtualJogo);
         CompeticaoAtual = findViewById(R.id.txtAtualCompeticao);
         AdversarioAtual = findViewById(R.id.txtAtualAdversario);
-        BotaoEnviarNot = findViewById(R.id.btnEnviarNot);
+        BotaoEnviarNot = findViewById(R.id.btnEnviarJogo);
         BotaoEnviarJogo = findViewById(R.id.btnEnviarJogo);
 
 
+    }
+
+    public void delete(View view){
+        Intent delete = new Intent(this, delete.class);
+        startActivity(delete);
     }
 
     public void enviaRequisicao(){
