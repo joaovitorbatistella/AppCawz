@@ -43,7 +43,7 @@
         app:layout_constraintTop_toTopOf="@+id/scrollView2" />
 
     <Button
-        android:id="@+id/btnEnviarJogo"
+        android:id="@+id/btnEnviarNot"
         android:layout_width="98dp"
         android:layout_height="38dp"
         android:onClick="enviarNot"

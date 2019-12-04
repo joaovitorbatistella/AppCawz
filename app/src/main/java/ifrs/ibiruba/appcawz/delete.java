@@ -1,8 +1,13 @@
 package ifrs.ibiruba.appcawz;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -13,26 +18,59 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.sql.SQLOutput;
+import java.util.ArrayList;
+import java.util.List;
 
 public class delete extends AppCompatActivity {
 
     String parametros="";
     String resposta="";
-    String resulta="";
-    TextView Titulo1;
+    String resulta1="";
+    String resulta2="";
+    String resulta3="";
+    String resulta4="";
+    String resulta5="";
+    TextView Title1, Title2, Title3, Title4, Title5;
+    ListView listView;
+    List<String> noticias;
+    ArrayAdapter<String> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delete);
 
-        Titulo1 = findViewById(R.id.titulo1);
+
+        listView = findViewById(R.id.listView);
+
+
         parametros = "titulo=teste&corpo_noticia=teste com espaco&dia=10/10/2019";
+
+        enviaRequisicao();
+        //System.out.println("OKOKOK");
+
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String noticia = (String) parent.getItemAtPosition(position);
+                //parametros = "titulo=" +noticia;
+                //enviaRequisicaoDelete();
+                Toast.makeText(delete.this, noticia, Toast.LENGTH_LONG).show();
+            }
+        });
+
     }
 
     public void enviaRequisicao(){
         new delete.MakeNetworkCall().execute("https://cawz.000webhostapp.com/consulta_delete.php", "Post");
     }
+    public void enviaRequisicaoDelete(){
+        new delete.MakeNetworkCall().execute("https://cawz.000webhostapp.com/exclui_not.php", "Post");
+    }
+
+
 
     InputStream ByPostMethod(String ServerURL) {
 
@@ -119,7 +157,20 @@ public class delete extends AppCompatActivity {
         return resposta;
     }
 
+
     public void DisplayMessage(String a) {
+        Toast.makeText(this,"Excluido", Toast.LENGTH_LONG);
+
+            Intent principal = new Intent(this, delete.class);
+            startActivity(principal);
+
+
+    }
+
+    public void DisplayMessageListView(String a) {
+        //Toast.makeText(this,a, Toast.LENGTH_LONG);
+
+
 
         // TxtResult = findViewById(R.id.response);
 
@@ -131,17 +182,27 @@ public class delete extends AppCompatActivity {
         System.out.println(a);*/
 
         String tudo[] = a.split("¢");
-        String noticias1[] = tudo[0].split("£");
-        String noticias2[] = tudo[1].split("£");
-        String noticias3[] = tudo[2].split("£");
-        String noticias4[] = tudo[3].split("£");
-        String noticias5[] = tudo[4].split("£");
-        Toast.makeText(this, noticias1[0], Toast.LENGTH_LONG);
-        Toast.makeText(this, noticias2[1], Toast.LENGTH_LONG);
+        Toast.makeText(this,a, Toast.LENGTH_LONG);
 
-        resulta="" + noticias1[0]+ " " + " " + noticias1[1];
 
-        Titulo1.setText(resulta);
+        int qnt = tudo.length;
+
+        Toast.makeText(this, String.valueOf(qnt), Toast.LENGTH_LONG);
+
+        noticias = new ArrayList<String>();
+        for(int i=0; i<qnt; i++){
+            String noticia[] = tudo[i].split("£");
+           //if (noticia[1] != null)
+                noticias.add(noticia[1]);
+
+
+        }
+
+
+        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, noticias);
+        listView.setAdapter(adapter);
+
+
     }
 
 
@@ -180,12 +241,16 @@ public class delete extends AppCompatActivity {
         @Override
         protected void onPostExecute(String result) {
             super.onPostExecute(result);
-            result = String.valueOf(result);
 
-            DisplayMessage(result);
+
+
+            DisplayMessageListView(result);
             //Log.d(LOG_TAG, "Result: " + result);
             // return result;
         }
     }
+
+
+
 
 }

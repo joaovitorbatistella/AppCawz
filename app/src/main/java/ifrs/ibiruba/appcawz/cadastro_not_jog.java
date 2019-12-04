@@ -34,7 +34,7 @@ public class cadastro_not_jog extends AppCompatActivity {
         JogoAtual = findViewById(R.id.txtAtualJogo);
         CompeticaoAtual = findViewById(R.id.txtAtualCompeticao);
         AdversarioAtual = findViewById(R.id.txtAtualAdversario);
-        BotaoEnviarNot = findViewById(R.id.btnEnviarJogo);
+        BotaoEnviarNot = findViewById(R.id.btnEnviarNot);
         BotaoEnviarJogo = findViewById(R.id.btnEnviarJogo);
 
 
