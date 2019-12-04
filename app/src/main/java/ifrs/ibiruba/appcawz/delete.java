@@ -57,7 +57,7 @@ public class delete extends AppCompatActivity {
                 String noticia = (String) parent.getItemAtPosition(position);
                 //parametros = "titulo=" +noticia;
                 //enviaRequisicaoDelete();
-                Toast.makeText(delete.this, noticia, Toast.LENGTH_LONG).show();
+                Toast.makeText(delete.this, "aaaaaaaaaaaaaaaaaa", Toast.LENGTH_LONG).show();
             }
         });
 
