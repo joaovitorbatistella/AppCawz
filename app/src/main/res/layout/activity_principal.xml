@@ -10,8 +10,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayoutP"
-        android:layout_width="406dp"
-        android:layout_height="70dp"
+        android:layout_width="420dp"
+        android:layout_height="86dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
@@ -20,15 +20,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
         <ImageView
-            android:id="@+id/imageView2P"
-            android:layout_width="56dp"
-            android:layout_height="47dp"
-            android:layout_marginStart="44dp"
-            android:layout_marginTop="28dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@android:drawable/btn_star_big_on" />
+            android:id="@+id/imageView4"
+            android:layout_width="72dp"
+            android:layout_height="76dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/escudo" />
 
         <TextView
             android:id="@+id/textView2P"
@@ -41,6 +44,12 @@
             android:textSize="30sp"
             app:layout_constraintStart_toEndOf="@+id/imageView2P"
             app:layout_constraintTop_toTopOf="@+id/imageView2P" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
 
         <TextView
             android:id="@+id/textView4"
@@ -70,13 +79,13 @@
         android:layout_width="395dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:background="#00362447"
         android:gravity="center|center_horizontal"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayoutP">
 
@@ -93,10 +102,10 @@
 
     <LinearLayout
         android:id="@+id/linearLayout3P"
-        android:layout_width="274dp"
-        android:layout_height="117dp"
+        android:layout_width="285dp"
+        android:layout_height="158dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
         android:background="#21142C"
         android:orientation="vertical"
@@ -135,10 +144,11 @@
 
             <ImageView
                 android:id="@+id/imageView2"
-                android:layout_width="5dp"
+                android:layout_width="43dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:srcCompat="?attr/actionModeShareDrawable" />
+                app:srcCompat="@drawable/escudo"
+                tools:srcCompat="@drawable/escudo" />
 
             <TextView
                 android:id="@+id/textView8P"
@@ -163,16 +173,17 @@
 
     <ScrollView
         android:id="@+id/scrollView3"
-        android:layout_width="395dp"
-        android:layout_height="329dp"
+        android:layout_width="389dp"
+        android:layout_height="258dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="85dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView35">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3P">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -350,20 +361,17 @@
     </ScrollView>
 
     <TextView
-        android:id="@+id/textView35"
-        android:layout_width="382dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="8dp"
-        android:background="#00362447"
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Notícias"
-        android:textAlignment="center"
         android:textColor="#FFFFFF"
-        android:textSize="25sp"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3P" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3P"
+        app:layout_constraintVertical_bias="0.289" />
 
 
 </android.support.constraint.ConstraintLayout>

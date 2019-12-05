@@ -27,30 +27,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="201dp"
-        android:layout_height="210dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:srcCompat="@android:drawable/btn_star_big_off" />
-
     <LinearLayout
         android:id="@+id/linearLayout5"
         android:layout_width="398dp"
         android:layout_height="76dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="400dp"
         android:layout_marginEnd="8dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textView3"
@@ -97,29 +85,60 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
 
-    <Button
-        android:id="@+id/btn_aceesolivre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="8dp"
-        android:onClick="semConta"
-        android:text="Acesse sem conta"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-    <Button
-        android:layout_width="178dp"
-        android:layout_height="43dp"
-        android:onClick="cadastrarNot"
-        android:text="Cadastrar Noticias"
+    <LinearLayout
+        android:layout_width="399dp"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.947"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
-        app:layout_constraintVertical_bias="0.145" />
+        app:layout_constraintTop_toBottomOf="@+id/textView15"
+        app:layout_constraintVertical_bias="0.17">
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="178dp"
+            android:layout_height="43dp"
+            android:onClick="cadastrarNot"
+            android:text="Cadastrar Noticias" />
+
+        <TextView
+            android:id="@+id/sep"
+            android:layout_width="43dp"
+            android:layout_height="31dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btn_aceesolivre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="semConta"
+            android:text="Acesse sem conta" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="256dp"
+        android:layout_height="231dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="semConta"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/escudo" />
 
 </android.support.constraint.ConstraintLayout>

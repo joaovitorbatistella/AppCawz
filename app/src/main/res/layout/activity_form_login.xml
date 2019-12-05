@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#201B36"
     tools:context=".form_login">
 
     <TextView
@@ -13,7 +14,9 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="8dp"
+        android:background="#00FFFFFF"
         android:text="CLUBE ATLÉTICO WI-FI ZONE"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,7 +32,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:srcCompat="@android:drawable/btn_star_big_off" />
+        app:srcCompat="@drawable/escudo"
+        tools:srcCompat="@drawable/escudo" />
 
     <LinearLayout
         android:id="@+id/linearLayout7"
@@ -38,6 +42,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="76dp"
         android:layout_marginEnd="8dp"
+        android:background="#00FFFFFF"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -49,7 +54,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="#00FFFFFF"
             android:text="E-mail:"
+            android:textColor="#FFFFFF"
             android:textSize="20sp" />
 
         <EditText
@@ -79,7 +86,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="#00FFFFFF"
             android:text="Senha:"
+            android:textColor="#FFFFFF"
             android:textSize="20sp" />
 
         <EditText
