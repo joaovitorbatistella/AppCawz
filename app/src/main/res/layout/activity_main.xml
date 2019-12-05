@@ -11,14 +11,16 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="294dp"
+        android:layout_height="66dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="monospace"
+        android:gravity="center"
         android:shadowColor="#00E9E2E2"
         android:text="CLUBE ATLÉTICO WI-FI ZONE"
+        android:textAlignment="gravity"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
         android:textColorLink="#FFFFFF"
@@ -54,19 +56,31 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
             <Button
                 android:id="@+id/button"
-                android:layout_width="wrap_content"
+                android:layout_width="22dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Login" />
 
             <Button
                 android:id="@+id/button2"
-                android:layout_width="74dp"
-                android:layout_height="wrap_content"
+                android:layout_width="36dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="Cadastre-se" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
         </LinearLayout>
     </LinearLayout>
 
@@ -106,12 +120,6 @@
             android:layout_height="43dp"
             android:onClick="cadastrarNot"
             android:text="Cadastrar Noticias" />
-
-        <TextView
-            android:id="@+id/sep"
-            android:layout_width="43dp"
-            android:layout_height="31dp"
-            android:layout_weight="1" />
 
         <Button
             android:id="@+id/btn_aceesolivre"

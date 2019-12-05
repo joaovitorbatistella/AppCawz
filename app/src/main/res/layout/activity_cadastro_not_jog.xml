@@ -37,7 +37,7 @@
         android:layout_marginEnd="150dp"
         android:text="Cadastro de Notícias"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/scrollView2" />
@@ -55,8 +55,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout10"
-        android:layout_width="378dp"
-        android:layout_height="68dp"
+        android:layout_width="385dp"
+        android:layout_height="57dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -72,7 +72,7 @@
             android:text="Título"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:textSize="15sp" />
 
         <EditText
             android:id="@+id/txtCadastroTitulo"
@@ -80,15 +80,16 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Título da Notícia"
+            android:text="Sem espaço e sem acentos"
             android:textAlignment="center"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout6"
-        android:layout_width="378dp"
-        android:layout_height="72dp"
+        android:layout_width="391dp"
+        android:layout_height="58dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
@@ -104,7 +105,7 @@
             android:text="Data Notícia"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:textSize="15sp" />
 
         <EditText
             android:id="@+id/txtCadastroData"
@@ -114,13 +115,14 @@
             android:inputType="textPersonName"
             android:text="12/10/2019"
             android:textAlignment="center"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout9"
-        android:layout_width="374dp"
-        android:layout_height="62dp"
+        android:layout_width="385dp"
+        android:layout_height="56dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
@@ -136,7 +138,7 @@
             android:text="Corpo"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:textSize="15sp" />
 
         <EditText
             android:id="@+id/txtCadastroCorpo"
@@ -146,7 +148,8 @@
             android:inputType="textPersonName"
             android:text="txtxtxtxtxttxtxtxt"
             android:textAlignment="center"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
     </LinearLayout>
 
     <TextView
@@ -163,32 +166,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="200dp"
         android:layout_marginEnd="100dp"
         android:text="Atualizar Jogos"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
         android:id="@+id/btnEnviarJogo"
-        android:layout_width="103dp"
-        android:layout_height="35dp"
+        android:layout_width="123dp"
+        android:layout_height="38dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="290dp"
+        android:layout_marginTop="220dp"
         android:layout_marginEnd="10dp"
         android:onClick="enviarJogo"
         android:text="Atualizar"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView7"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout11"
-        android:layout_width="380dp"
-        android:layout_height="69dp"
+        android:layout_width="386dp"
+        android:layout_height="59dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -204,7 +208,7 @@
             android:text="Jogo"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:textSize="15sp" />
 
         <EditText
             android:id="@+id/txtAtualJogo"
@@ -214,13 +218,14 @@
             android:inputType="textPersonName"
             android:text="12/110 | 12:00 | Módulo"
             android:textAlignment="center"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout12"
-        android:layout_width="378dp"
-        android:layout_height="70dp"
+        android:layout_width="388dp"
+        android:layout_height="57dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
@@ -237,7 +242,7 @@
             android:text="Competição"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:textSize="15sp" />
 
         <EditText
             android:id="@+id/txtAtualCompeticao"
@@ -247,13 +252,14 @@
             android:inputType="textPersonName"
             android:text="Copa do Brasil"
             android:textAlignment="center"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout13"
-        android:layout_width="374dp"
-        android:layout_height="66dp"
+        android:layout_width="378dp"
+        android:layout_height="58dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -270,7 +276,7 @@
             android:text="Adversário"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:textSize="15sp" />
 
         <EditText
             android:id="@+id/txtAtualAdversario"
@@ -280,18 +286,20 @@
             android:inputType="textPersonName"
             android:text="301"
             android:textAlignment="center"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
     </LinearLayout>
 
     <Button
         android:id="@+id/button5"
         android:layout_width="130dp"
         android:layout_height="35dp"
-        android:layout_marginBottom="130dp"
+        android:layout_marginBottom="230dp"
         android:onClick="delete"
         android:text="Ver Noticias"
         app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout13" />
 
 </android.support.constraint.ConstraintLayout>
