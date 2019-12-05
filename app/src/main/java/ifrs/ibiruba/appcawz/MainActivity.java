@@ -30,6 +30,11 @@ public class MainActivity extends AppCompatActivity {
         Intent principal = new Intent(this, principal.class);
         startActivity(principal);
     }
+    public void cadastrarNot(View view){
+        Intent not = new Intent(MainActivity.this, cadastro_not_jog.class);
+        startActivity(not);
+    }
+
 
 
 }

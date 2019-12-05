@@ -5,9 +5,7 @@ import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,59 +16,42 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.sql.SQLOutput;
 import java.util.ArrayList;
-import java.util.List;
 
-public class delete extends AppCompatActivity {
-
+public class excluir extends AppCompatActivity {
     String parametros="";
     String resposta="";
-    String resulta1="";
-    String resulta2="";
-    String resulta3="";
-    String resulta4="";
-    String resulta5="";
-    TextView Title1, Title2, Title3, Title4, Title5;
-    ListView listView;
-    List<String> noticias;
-    ArrayAdapter<String> adapter;
+    TextView Tteste;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_delete);
+        setContentView(R.layout.activity_excluir);
 
+        Tteste = findViewById(R.id.tituloteste);
 
-        listView = findViewById(R.id.listView);
+        Bundle extras = getIntent().getExtras();
+        if (extras != null){
+            String noticia = extras.getString("noticia");
+            parametros = "titulo=" + noticia;
 
+            enviaRequisicao();
+        }
 
-        parametros = "titulo=teste&corpo_noticia=teste com espaco&dia=10/10/2019";
-
-        enviaRequisicao();
-        //System.out.println("OKOKOK");
-
-
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String noticia = (String) parent.getItemAtPosition(position);
-                //parametros = "titulo=" +noticia;
-                //enviaRequisicaoDelete();
-                //Toast.makeText(delete.this, "aaaaaaaaaaaaaaaaaa", Toast.LENGTH_LONG).show();
-                Intent exclui = new Intent(delete.this, excluir.class);
-                exclui.putExtra("noticia", noticia);
-                startActivity(exclui);
-            }
-        });
 
     }
+
+
 
     public void enviaRequisicao(){
-        new delete.MakeNetworkCall().execute("https://cawz.000webhostapp.com/consulta_delete.php", "Post");
+        new excluir.MakeNetworkCall().execute("https://cawz.000webhostapp.com/exclui_not.php", "Post");
     }
 
 
+    public void voltar(View view){
+        Intent voltar = new Intent(excluir.this, principal.class);
+        startActivity(voltar);
+    }
 
 
     InputStream ByPostMethod(String ServerURL) {
@@ -160,49 +141,17 @@ public class delete extends AppCompatActivity {
 
 
     public void DisplayMessage(String a) {
-        Toast.makeText(this,"Excluido", Toast.LENGTH_LONG);
-
-
-
-    }
-
-    public void DisplayMessageListView(String a) {
-        //Toast.makeText(this,a, Toast.LENGTH_LONG);
-
-
-
-        // TxtResult = findViewById(R.id.response);
-
-        /*Titulo1.setText(a);
+        Toast.makeText(this, a, Toast.LENGTH_LONG);
+        Tteste.setText(a);
 
         //this.resposta = a;
 
 
-        System.out.println(a);*/
-
-        String tudo[] = a.split("¢");
-        Toast.makeText(this,a, Toast.LENGTH_LONG);
-
-
-        int qnt = tudo.length;
-
-        Toast.makeText(this, String.valueOf(qnt), Toast.LENGTH_LONG);
-
-        noticias = new ArrayList<String>();
-        for(int i=0; i<qnt; i++){
-            String noticia[] = tudo[i].split("£");
-           //if (noticia[1] != null)
-                noticias.add(noticia[1]);
-
-
-        }
-
-
-        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, noticias);
-        listView.setAdapter(adapter);
-
+        System.out.println(a);
 
     }
+
+
 
 
 
@@ -243,13 +192,11 @@ public class delete extends AppCompatActivity {
 
 
 
-            DisplayMessageListView(result);
+            DisplayMessage(result);
             //Log.d(LOG_TAG, "Result: " + result);
             // return result;
         }
     }
-
-
 
 
 }

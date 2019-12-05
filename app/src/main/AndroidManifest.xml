@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".delete"></activity>
+        <activity android:name=".excluir"></activity>
+        <activity android:name=".delete" />
         <activity android:name=".principal" />
         <activity android:name=".cadastro_not_jog" />
         <activity android:name=".form_login" />

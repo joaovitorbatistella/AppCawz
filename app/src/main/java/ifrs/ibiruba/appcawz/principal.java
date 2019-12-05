@@ -164,6 +164,12 @@ public class principal extends AppCompatActivity {
 
     public void DisplayMessageFinal(String a) {
 
+        if (a != null){
+
+        } else {
+
+        }
+
         String tudo[] = a.split("§");
 
         String noticias[] = tudo[0].split("¢");
